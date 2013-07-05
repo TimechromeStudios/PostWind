@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "Gestion.h"
+//#include "Entity.h"
 
 using namespace std;
 

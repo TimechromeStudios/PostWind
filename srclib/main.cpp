@@ -5,7 +5,6 @@
 using namespace std;
 
 string version = "Pre-Alpha";
-Gestion central();
 int nombre;
 int main()
 {

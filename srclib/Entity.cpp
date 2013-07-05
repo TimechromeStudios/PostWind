@@ -1,3 +1,5 @@
+#include "Entity.h"
+
 Entity::Entity(int p_id, int p_health, string p_name)
 {
 	id = p_id;

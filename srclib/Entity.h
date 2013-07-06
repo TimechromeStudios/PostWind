@@ -1,3 +1,5 @@
+#ifndef DEF_ENTITY
+#define DEF_ENTITY
 #include <iostream>
 
 class Entity
@@ -14,3 +16,4 @@ public:
 	int getHealth();
 	void setHealth(int p_health);
 };
+#endif

@@ -2,7 +2,7 @@
 
 class Entity
 {
-private:
+protected:
 	int id;
 	std::string name;
 	int health;

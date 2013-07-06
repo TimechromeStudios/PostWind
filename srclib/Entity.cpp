@@ -12,20 +12,20 @@ int Entity::getId()
 	return id;
 }
 
-int getHealth()
+int Entity::getHealth()
 {
 	return health;
 }
 
-std::string getName()
+std::string Entity::getName()
 {
 	return name;
 }
-void setName(std::string p_name)
+void Entity::setName(std::string p_name)
 {
 	name = p_name;
 }
-void setHealth(int p_health)
+void Entity::setHealth(int p_health)
 {
 	health = p_health;
 }

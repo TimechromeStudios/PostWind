@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstdlib>
-//#include "Entity.h"
+#include "Entity.h"
 
 using namespace std;
 
 string version = "Pre-Alpha";
-int nombre;
+int entityId;
 int main()
 {
 	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl;

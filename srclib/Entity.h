@@ -5,9 +5,9 @@ class Entity
 private:
 	int id;
 	std::string name;
-	int health
+	int health;
 public:
-	Entity(int p_id, int p_health, string p_name);
+	Entity(int p_id, int p_health, std::string p_name);
 	int getId();
 	std::string getName();
 	void setName(std::string p_name);

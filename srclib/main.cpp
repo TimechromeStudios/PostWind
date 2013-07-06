@@ -5,7 +5,8 @@
 using namespace std;
 
 string version = "Pre-Alpha";
-int entityId;
+int entityId = 0;
+
 int main()
 {
 	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl;

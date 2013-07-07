@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "Item.h"
 #include "Alive.h"
+#include "Arme.h"
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 #ifndef DEF_ITEM
 #define DEF_ITEM
-
+#include <string>
 class Item
 {
 protected:

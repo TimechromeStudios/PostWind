@@ -1,4 +1,5 @@
-#include <string>
+#ifndef DEF_ITEM
+#define DEF_ITEM
 
 class Item
 {
@@ -15,3 +16,4 @@ public:
     void setWorth(int p_worth);
     void setDamageBonus(int p_damageBonus);
 };
+#endif

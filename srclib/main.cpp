@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "Entity.h"
 #include "Item.h"
+#include "Alive.h"
 
 using namespace std;
 

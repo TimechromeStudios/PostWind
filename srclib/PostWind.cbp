@@ -32,8 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Alive.cpp" />
+		<Unit filename="Alive.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />
+		<Unit filename="Item.cpp" />
+		<Unit filename="Item.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

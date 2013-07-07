@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Entity.h"
+#include "Item.h"
 
 using namespace std;
 

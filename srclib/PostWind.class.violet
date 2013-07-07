@@ -59,8 +59,11 @@ int maxDamageBase</string>
     </void>
     <void property="methods">
      <void property="text">
-      <string>vector&lt;Item&gt; getInventory();
+      <string>Alive( int p_id, int p_health, string  p_name, int p_minDB, int p_maxDB );
+Alive( int p_id, int p_health, string  p_name, int p_minDB, int p_maxDB, vector&lt;Item&gt; p_inventory );
+vector&lt;Item&gt; getInventory();
 void setInventory( vector&lt;Item&gt; p_inventory );
+void addItem( Item p_item );
 int getMinDB( );
 int getMaxDB( );
 void setMinDB( int p_damage );
@@ -80,36 +83,40 @@ void attackEntity( Entity *p_entity, int p_damage );</string>
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double1"/>
-      <double>307.0</double>
+      <double>299.7597978962927</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double1"/>
-      <double>18.0</double>
+      <double>20.595723522207223</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>307.0</double>
-     <double>18.0</double>
+     <double>299.7597978962927</double>
+     <double>20.595723522207223</double>
     </void>
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.ClassNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode2">
     <void property="attributes">
      <void property="text">
       <string>string name
-int worth</string>
+int worth
+int damageBonus</string>
      </void>
     </void>
     <void property="methods">
      <void property="text">
-      <string>string getName();
+      <string>Item( string p_name, int p_worth, int p_damageBonus );
+string getName();
 int getWorth();
-void setName();
-void setWorth();</string>
+int getDamageBonus();
+void setName( string p_name );
+void setWorth( int p_worth );
+void setDamageBonus( int p_damageBonus );</string>
      </void>
     </void>
     <void property="name">
@@ -123,19 +130,19 @@ void setWorth();</string>
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double2"/>
-      <double>680.0</double>
+      <double>910.4056177795178</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double2"/>
-      <double>30.0</double>
+      <double>34.204482076268604</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>680.0</double>
-     <double>30.0</double>
+     <double>910.4056177795178</double>
+     <double>34.204482076268604</double>
     </void>
    </object>
   </void>
@@ -150,6 +157,18 @@ void setWorth();</string>
    </object>
    <object idref="ClassNode0"/>
    <object idref="ClassNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="V"/>
+    </void>
+    <void property="lineStyle">
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/>
+    </void>
+   </object>
+   <object idref="ClassNode1"/>
+   <object idref="ClassNode2"/>
   </void>
  </object>
 </java>

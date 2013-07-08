@@ -123,6 +123,112 @@ void setDamageBonus( int p_damageBonus );</string>
     </void> 
    </object> 
   </void> 
+  <void method="addNode"> 
+   <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>int intel
+int cha
+int for
+int adr
+int agl</string> 
+     </void> 
+    </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>Caracs( p_intel, p_cha, p_for, p_adr, p_agl );
+Caracs();
+int getIntel();
+int getCha();
+int getFor();
+int getAdr();
+int getAgl();
+void setIntel( int p_intel );
+void setCha( int p_cha );
+void setFor( int p_for );
+void setAdr( int p_adr );
+void setAgl( int p_agl );</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>Caracs</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1249.1215310997604</double> 
+     <double>28.235432488844793</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode4" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>int cacAttack
+int distanceAttack
+int escalade
+int piratage
+int discretion
+int metabolisme
+int parade
+int informatique
+int arnaque
+int artificerie
+int mecanique
+int electronique
+int physique
+int biologie</string> 
+     </void> 
+    </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>Competences( int p_cacAttack, int p_distanceAttack, int p_escalade, int p_piratage, int p_discretion, int p_metabolisme, int p_parade, int p_informatique, int p_arnaque, int p_artificerie, int p_mecanique, int p_electronique, int p_physique, int p_biologie );
+int getCacAttack();
+int getDistanceAttack();
+int getEscalade();
+int getPiratage();
+int getDiscretion();
+int getMetabolisme();
+int getParade();
+int getInformatique();
+int getArnaque();
+int getArtificerie();
+int getMecanique();
+int getElectronique();
+int getPhysique();
+int getBiologie();
+int setCacAttack( int p_cacAttack );
+int setDistanceAttack( int p_distanceAttack );
+int setEscalade( int p_escalade );
+int setPiratage( int p_piratage );
+int setDiscretion( int p_discretion );
+int setMetabolisme( int p_metabolisme );
+int setParade( int p_parade );
+int setInformatique( int p_informatique );
+int setArnaque( int p_arnaque );
+int setArtificerie( int p_artificerie );
+int setMecanique( int p_mecanique );
+int setElectronique( int p_electronique );
+int setPhysique( int p_physique );
+int setBiologie( int p_biologie );</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>Competences</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>32.73021425791251</double> 
+     <double>587.9693946467034</double> 
+    </void> 
+   </object> 
+  </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
     <void property="bentStyle"> 
@@ -146,6 +252,30 @@ void setDamageBonus( int p_damageBonus );</string>
    </object> 
    <object idref="ClassNode1"/> 
    <object idref="ClassNode2"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode1"/> 
+   <object idref="ClassNode3"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode1"/> 
+   <object idref="ClassNode4"/> 
   </void> 
  </object> 
 </java> 

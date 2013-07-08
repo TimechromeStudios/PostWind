@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Alive.cpp" />
 		<Unit filename="Alive.h" />
+		<Unit filename="Arme.cpp" />
+		<Unit filename="Arme.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />
 		<Unit filename="Item.cpp" />

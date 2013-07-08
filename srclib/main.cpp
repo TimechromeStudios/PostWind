@@ -1,18 +1,18 @@
-#include <iostream>
-#include <cstdlib>
-#include "Entity.h"
-#include "Item.h"
-#include "Alive.h"
-#include "Arme.h"
+#include <iostream> //Inclusion de la librairie standard
+#include <cstdlib> //Inclusion de la librairie stdlib.h issue du C
+#include "Entity.h" //Inclusion de la classe Entity
+#include "Item.h" //Inclusion de la classe Item
+#include "Alive.h" //Inclusion de la classe Alive
+#include "Arme.h" //Inclusion de la classe Arme
 
-using namespace std;
+using namespace std; //Utilisation du namespace standard
 
-string version = "Pre-Alpha";
-int entityId = 0;
+string version = "Pre-Alpha"; //Version du programme, affichée plus bas
+int entityId = 0; //Index d'entité, à incrémenter au fur et à mesure des créations d'entités
 
-int main()
+int main() //Fonction principale
 {
-	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl;
-	cout << "Le jeu va commencer!" << endl;
-	return 0;
+	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl; //Message de bienvenue
+	cout << "Le jeu va commencer!" << endl; //Là, je pense que vous avez compris
+	return 0; //Fin du programme
 }

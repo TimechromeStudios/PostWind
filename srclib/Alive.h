@@ -5,7 +5,7 @@
 #include "Entity.h" //Inclusion de la librairie mère
 #include "Item.h" //Inclusion de la classe Item
 
-class Alive : public Entity //La classe Alive définit toutes les entitités vivantes, et pouvant fair des dégâts
+class Alive : public Entity //La classe Alive définit toutes les entités vivantes, et pouvant faire des dégâts
 {
 protected:
     std::vector<Item> inventory; //L'inventaire de l'entité

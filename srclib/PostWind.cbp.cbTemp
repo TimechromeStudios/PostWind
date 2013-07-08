@@ -36,7 +36,6 @@
 		<Unit filename="Alive.h" />
 		<Unit filename="Arme.cpp" />
 		<Unit filename="Arme.h" />
-		<Unit filename="Caracs.cpp" />
 		<Unit filename="Caracs.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />

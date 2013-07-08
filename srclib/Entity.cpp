@@ -29,3 +29,27 @@ void Entity::setHealth(int p_health)
 {
 	health = p_health;
 }
+int Entity::getX()
+{
+	return x;
+}
+int Entity::getY()
+{
+    return y;
+}
+int Entity::getZ()
+{
+    return z;
+}
+void Entity::setX(int p_x)
+{
+    x = p_x;
+}
+void Entity::setY(int p_y)
+{
+    y = p_y;
+}
+void Entity::setZ(int p_z)
+{
+    z = p_z;
+}

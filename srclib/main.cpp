@@ -4,13 +4,11 @@
 #include "Item.h" //Inclusion de la classe Item
 #include "Alive.h" //Inclusion de la classe Alive
 #include "Arme.h" //Inclusion de la classe Arme
-#include "libdlc.h" //Inclusion du ModSystem
-#include <vector> //Inclusion de la librairie vector
-#include <fstream> //Inclusion de la librairie fstream
+#include <vector> //Inclusion de la librairie vector,
 
 using namespace std; //Utilisation du namespace standard
 
-string version = "de developpement"; //Version du programme, affichée plus bas
+string const version = "de developpement"; //Version du programme, affichée plus bas
 int entityId = 0; //Index d'entité, à incrémenter au fur et à mesure des créations d'entités
 
 int main() //Fonction principale

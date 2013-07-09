@@ -8,6 +8,7 @@ protected:
 	int fo; //Force de l'entité
 	int adr; //Adresse de l'entité
 	int cou; //Courage de l'entité
+	int con; //Consitution de l'entité
 public:
 	Caracs(); //Constructeur par défaut, initialise toutes les caracs à 10
 	Caracs(int p_moyenne); //Second constructeur
@@ -17,10 +18,12 @@ public:
 	int getFo(); //Renvoie le score de force
 	int getAdr(); //Renvoie le score d'adresse
 	int getCou(); //Renvoie le score de courage
+	int getCon(); //Renvoie le score de constitution
 	void setInt(int p_intel); //Définit le score d'intelligence
 	void setCha(int p_cha); //Définit le score de charisme
 	void setFo(int p_fo); //Définit le score de force
 	void setAdr(int p_adr); //Définit de le score d'adresse
 	void setCou(int p_cou); //Définit le score de courage
+	void setCon(int p_con); //Définit le score de constitution
 };
 #endif

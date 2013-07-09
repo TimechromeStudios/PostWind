@@ -131,7 +131,8 @@ void setDamageBonus( int p_damageBonus );</string>
 int cha
 int for
 int adr
-int agl</string> 
+int cou
+int con</string> 
      </void> 
     </void> 
     <void property="methods"> 
@@ -142,12 +143,14 @@ int getIntel();
 int getCha();
 int getFor();
 int getAdr();
-int getAgl();
+int getCou();
+int getCon();
 void setIntel( int p_intel );
 void setCha( int p_cha );
 void setFor( int p_for );
 void setAdr( int p_adr );
-void setAgl( int p_agl );</string> 
+void setCou( int p_cou );
+void setCon( int p_con) );</string> 
      </void> 
     </void> 
     <void property="name"> 
@@ -172,7 +175,6 @@ int distanceAttack
 int escalade
 int piratage
 int discretion
-int metabolisme
 int parade
 int informatique
 int arnaque
@@ -191,7 +193,6 @@ int getDistanceAttack();
 int getEscalade();
 int getPiratage();
 int getDiscretion();
-int getMetabolisme();
 int getParade();
 int getInformatique();
 int getArnaque();
@@ -205,7 +206,6 @@ int setDistanceAttack( int p_distanceAttack );
 int setEscalade( int p_escalade );
 int setPiratage( int p_piratage );
 int setDiscretion( int p_discretion );
-int setMetabolisme( int p_metabolisme );
 int setParade( int p_parade );
 int setInformatique( int p_informatique );
 int setArnaque( int p_arnaque );

@@ -44,6 +44,10 @@ int Caracs::getCou()
 {
     return cou;
 }
+int Caracs::getCon()
+{
+    return con;
+}
 void Caracs::setInt(int p_intel)
 {
     intel = p_intel;
@@ -63,4 +67,8 @@ void Caracs::setAdr(int p_adr)
 void Caracs::setCou(int p_cou)
 {
     cou = p_cou;
+}
+void Caracs::setCon(int p_con)
+{
+    con = p_con;
 }

@@ -36,7 +36,7 @@ public:
     *p_biologie: compétences en biologie              *
     **************************************************/
     int getCacAttack();  //Renvoie les points de compétence pour l'attaque au corps à corps
-    int getDistantAttack();  //Renvoie les points de compétence pour l'attaque à distance
+    int getDistanceAttack();  //Renvoie les points de compétence pour l'attaque à distance
     int getEscalade();  //Renvoie les points de compétence pour l'escalade
     int getPiratage();  //Renvoie les points de compétence pour le piratage
     int getDiscretion();  //Renvoie les points de compétence pour la discrétion
@@ -48,19 +48,19 @@ public:
     int getElectronique();  //Renvoie les points de compétence pour l'électronique
     int getPhysique();  //Renvoie les points de compétence pour la physique
     int getBiologie();  //Renvoie les points de compétence pour la biologie
-    int setCacAttack(int p_cacAttack);  //Fait une définition des points de compétence pour l'attaque au corps à corps
-    int setDistanceAttack(int p_distanceAttack);  //Fait une définition des points de compétence pour l'attaque à distance
-    int setEscalade (int p_escalade);  //Fait une définition des points de compétence pour l'escalade
-    int setPiratage (int p_piratage);  //Fait une définition des points de compétence pour le piratage
-    int setDiscretion (int p_discretion);  //Fait une définition des points de compétence pour la discrétion
-    int setParade (int p_parade);  //Fait une définition des points de compétence pour la parade
-    int setInformatique (int p_informatique);  //Fait une définition des points de compétence pour l'informatique
-    int setArnaque (int p_arnaque);  //Fait une définition des points de compétence pour l'arnaque
-    int setArtificerie (int p_artificerie);  //Fait une définition des points de compétence pour l'artificerie
-    int setMecanique (int p_mecanique);  //Fait une définition des points de compétence pour la mécanique
-    int setElectronique (int p_electronique);  //Fait une définition des points de compétence pour l'électronique
-    int setPhysique (int p_physique);  //Fait une définition des points de compétence pour la physique
-    int setBiologie (int p_biologie);  //Fait une définition des points de compétence pour la biologie
+    void setCacAttack(int p_cacAttack);  //Fait une définition des points de compétence pour l'attaque au corps à corps
+    void setDistanceAttack(int p_distanceAttack);  //Fait une définition des points de compétence pour l'attaque à distance
+    void setEscalade (int p_escalade);  //Fait une définition des points de compétence pour l'escalade
+    void setPiratage (int p_piratage);  //Fait une définition des points de compétence pour le piratage
+    void setDiscretion (int p_discretion);  //Fait une définition des points de compétence pour la discrétion
+    void setParade (int p_parade);  //Fait une définition des points de compétence pour la parade
+    void setInformatique (int p_informatique);  //Fait une définition des points de compétence pour l'informatique
+    void setArnaque (int p_arnaque);  //Fait une définition des points de compétence pour l'arnaque
+    void setArtificerie (int p_artificerie);  //Fait une définition des points de compétence pour l'artificerie
+    void setMecanique (int p_mecanique);  //Fait une définition des points de compétence pour la mécanique
+    void setElectronique (int p_electronique);  //Fait une définition des points de compétence pour l'électronique
+    void setPhysique (int p_physique);  //Fait une définition des points de compétence pour la physique
+    void setBiologie (int p_biologie);  //Fait une définition des points de compétence pour la biologie
 };
 
 #endif

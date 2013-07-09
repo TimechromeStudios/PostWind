@@ -4,7 +4,8 @@
 #include "Item.h" //Inclusion de la classe Item
 #include "Alive.h" //Inclusion de la classe Alive
 #include "Arme.h" //Inclusion de la classe Arme
-#include "Caracs.h"
+#include "Caracs.h" //Inclusion de la class Caracs
+#include "Competences.h" //Inclusion de la class Competences
 #include <vector> //Inclusion de la librairie vector
 
 using namespace std; //Utilisation du namespace standard

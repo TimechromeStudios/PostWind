@@ -38,6 +38,7 @@
 		<Unit filename="Arme.h" />
 		<Unit filename="Caracs.cpp" />
 		<Unit filename="Caracs.h" />
+		<Unit filename="Competences.cpp" />
 		<Unit filename="Competences.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />

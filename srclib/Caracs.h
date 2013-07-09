@@ -12,7 +12,7 @@ protected:
 public:
 	Caracs(); //Constructeur par défaut, initialise toutes les caracs à 10
 	Caracs(int p_moyenne); //Second constructeur
-	Caracs(int p_intel, int p_cha, int p_fo, int p_adr, int p_cou); //Troisième constructeur
+	Caracs(int p_intel, int p_cha, int p_fo, int p_adr, int p_cou, int p_con); //Troisième constructeur
 	int getInt(); //Renvoie le score d'intelligence
 	int getCha(); //Renvoie le score de charisme
 	int getFo(); //Renvoie le score de force

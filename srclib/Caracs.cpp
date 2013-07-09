@@ -7,6 +7,7 @@ Caracs::Caracs()
     fo = 10;
     adr = 10;
     cou = 10;
+    con = 10;
 }
 Caracs::Caracs(int p_moyenne)
 {
@@ -15,14 +16,16 @@ Caracs::Caracs(int p_moyenne)
     fo = p_moyenne;
     adr = p_moyenne;
     cou = p_moyenne;
+    con = p_moyenne;
 }
-Caracs::Caracs(int p_intel, int p_cha, int p_fo, int p_adr, int p_cou)
+Caracs::Caracs(int p_intel, int p_cha, int p_fo, int p_adr, int p_cou, int p_con)
 {
     intel = p_intel;
     cha = p_cha;
     fo = p_fo;
     adr = p_adr;
     cou = p_cou;
+    con = p_con;
 }
 int Caracs::getInt()
 {

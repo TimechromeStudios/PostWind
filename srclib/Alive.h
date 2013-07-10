@@ -4,6 +4,8 @@
 #include <vector> //Inlclusion de la librairie pour les tableaux dynamiques
 #include "Entity.h" //Inclusion de la librairie mère
 #include "Item.h" //Inclusion de la classe Item
+#include "Caracs.h"  //Inclusion de la classe Caracs
+#include "Competences.h"  //Inclusion de la classe Competences
 
 class Alive : public Entity //La classe Alive définit toutes les entités vivantes, et pouvant faire des dégâts
 {
@@ -11,9 +13,12 @@ protected:
     std::vector<Item> inventory; //L'inventaire de l'entité
     int minDamageBase; //Les dégâts minimaux de l'entité
     int maxDamageBase; //Les dégâts maximaux de l'entité
+    Caracs caracs; //Les caractéristiques de l'entités
+    Competences competences;  //Les compétences de l'entité
+    int buff;  //Quelque chose
 public:
-    Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB); //Premier constructeur
-    Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, std::vector<Item> p_inventory); //Deuxième constructeur
+    Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, Caracs p_caracs,Competences p_competences); //Premier constructeur
+    Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, Caracs p_caracs,Competences p_competences, std::vector<Item> p_inventory); //Deuxième constructeur
     /************************************************
     *p_id: ID de l'entité                           *
     *p_health: Points de vie de l'entité            *
@@ -29,6 +34,9 @@ public:
     int getMaxDB(); //Renvoie les dégâts maximaux infligés par l'entité
     void setMinDB(int p_damage); //Fait une définition des dégâts minimaux infligés par l'entité
     void setMaxDB(int p_damage); //Fait une définition des dégâts maximaux infligés par l'entité
-    void lowingHealth(int p_damage); //Fait perdre des points de vie à l'entité
+    Caracs getCaracs();
+    Competences getCompetences();
+    void setCaracs(Caracs p_caracs);
+    void setCompetences(Competences p_Competences);
 };
 #endif

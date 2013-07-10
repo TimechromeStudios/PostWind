@@ -53,3 +53,8 @@ void Entity::setZ(int p_z)
 {
     z = p_z;
 }
+
+void Entity::lowingHealth(int p_damage)
+{
+    health -= p_damage;
+}

@@ -29,5 +29,6 @@ public:
 	void setX(int p_x); //Fait une définition des coordonnées en x de l'entité
 	void setY(int p_y); //Fait une définition des coordonnées en x de l'entité
 	void setZ(int p_z); //Fait une définition des coordonnées en x de l'entité
+    void lowingHealth (int p_damage);  //Fait perdre des points de vie à l'entité
 };
 #endif

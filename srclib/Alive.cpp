@@ -2,13 +2,15 @@
 #include <vector>
 #include "Item.h"
 #include "Alive.h"
+#include "Competences.h"
+#include "Caracs.h"
 
-Alive::Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB) : Entity(p_id, p_health, p_name)
+Alive::Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, Caracs p_caracs,Competences p_competences) : Entity(p_id, p_health, p_name)
 {
 	minDamageBase = p_minDB;
 	maxDamageBase = p_maxDB;
 }
-Alive::Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, std::vector<Item> p_inventory) : Entity(p_id, p_health, p_name)
+Alive::Alive(int p_id, int p_health, std::string p_name, int p_minDB, int p_maxDB, Caracs p_caracs,Competences p_competences, std::vector<Item> p_inventory) : Entity(p_id, p_health, p_name)
 {
 	minDamageBase = p_minDB;
 	maxDamageBase = p_maxDB;
@@ -42,7 +44,23 @@ void Alive::setMaxDB(int p_damage)
 {
     maxDamageBase = p_damage;
 }
-void Alive::lowingHealth(int p_damage)
+
+Caracs Alive::getCaracs()
 {
-    health -= p_damage;
+    return caracs;
+}
+
+Competences  Alive::getCompetences()
+{
+    return competences;
+}
+
+void Alive::setCaracs(Caracs p_caracs)
+{
+    caracs = p_caracs;
+}
+
+void Alive::setCompetences(Competences p_competences)
+{
+    competences = p_competences;
 }

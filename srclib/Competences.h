@@ -19,6 +19,7 @@ protected:
     int biologie;  //compétences en biologie
 
 public:
+     Competences ();
     Competences(int p_cacAttack, int p_distanceAttack, int p_escalade, int p_piratage, int p_discretion, int p_parade, int p_informatique, int p_arnaque, int p_artificerie, int p_mecanique, int p_electronique, int p_physique, int p_biologie);
     /**************************************************
     *p_cacAttack: compétence d'attaque                *

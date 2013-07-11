@@ -2,6 +2,23 @@
 #include <string>
 #include "Competences.h"
 
+Competences::Competences ()
+{
+    cacAttack = 50;
+    distanceAttack = 50;
+    escalade = 50;
+    piratage = 50;
+    discretion = 50;
+    parade = 50;
+    informatique = 50;
+    arnaque = 50;
+    artificerie = 50;
+    mecanique = 50;
+    electronique = 50;
+    physique = 50;
+    biologie = 50;
+}
+
 Competences::Competences(int p_cacAttack, int p_distanceAttack, int p_escalade, int p_piratage, int p_discretion, int p_parade, int p_informatique, int p_arnaque, int p_artificerie, int p_mecanique, int p_electronique, int p_physique, int p_biologie)
 {
     cacAttack = p_cacAttack;

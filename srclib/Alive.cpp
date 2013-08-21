@@ -45,6 +45,11 @@ void Alive::setMaxDB(int p_damage)
     maxDamageBase = p_damage;
 }
 
+void Alive::attackEntity(Entity &cible, int p_damage)
+{
+    cible.lowingHealth(p_damage);
+}
+
 Caracs Alive::getCaracs()
 {
     return caracs;

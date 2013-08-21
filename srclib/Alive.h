@@ -34,8 +34,11 @@ public:
     int getMaxDB(); //Renvoie les dégâts maximaux infligés par l'entité
     void setMinDB(int p_damage); //Fait une définition des dégâts minimaux infligés par l'entité
     void setMaxDB(int p_damage); //Fait une définition des dégâts maximaux infligés par l'entité
+    void attackEntity (Entity &cible, int p_damage); //fait perdre des points de vies a l'entité ciblée
     Caracs getCaracs();
+    //Caracs getCaracsp (); A rajouter plus tard
     Competences getCompetences();
+    //Competences getCompetencesP (); A rajouter plus tard
     void setCaracs(Caracs p_caracs);
     void setCompetences(Competences p_Competences);
 };

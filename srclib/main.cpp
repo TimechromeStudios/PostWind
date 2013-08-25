@@ -25,5 +25,6 @@ int main() //Fonction principale
 	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl; //Message de bienvenue
 	cout << "Le jeu va commencer!" << endl; //Là, je pense que vous avez compris
 	preparation(personnage, ennemi);
+	fight(personnage, ennemi);
 	return 0;
 }

@@ -8,6 +8,11 @@ class Dice
 private:
 public:
 	Dice();
+	static int d4();
+	static int d6();
+	static int d8();
+	static int d10();
+	static int d12();
 	static int d20();
 	static int d100();
 };

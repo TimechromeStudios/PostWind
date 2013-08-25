@@ -44,6 +44,5 @@ void preparation(Alive &p_personnage, Alive &p_ennemi)
 	int e_degatsMax = Dice::d100();
 	Caracs caracteristiquesEnnemi(e_intel, e_cha, e_fo, e_adr, e_cou, e_con);
 	p_ennemi.setCaracs(caracteristiquesEnnemi);
-	//TODO Finir la creation du perso, proposer de le tirer au hasard
-	//TODO Créer un objet Caracs pour initialiser le perso
 }
+//TODO Now... It's time for the fight!

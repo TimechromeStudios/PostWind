@@ -89,16 +89,17 @@ void fight(Alive &p_personnage, Alive &p_ennemi)
 			tourDeCombat(p_ennemi, p_personnage);
 			tourDeCombat(p_personnage, p_ennemi);
 		}
-		std::cout << p_personnage.getName() << ": " << p_personnage.getHealth() << std::endl << p_ennemi.getName() << ": " << p_ennemi.getHealth() << std::endl;
+		std::cout << "Il vous reste " << p_personnage.getHealth() << " points de vie." << std::endl;
+		//std::cout << p_personnage.getName() << ": " << p_personnage.getHealth() << std::endl << p_ennemi.getName() << ": " << p_ennemi.getHealth() << std::endl;
 	}
 	if(p_personnage.getHealth() > 0)
 	{
 	    std::cout << p_ennemi.getName() << " est mort." << std::endl;
-	    std::cout << "Le vainqueur est " << p_personnage.getName() << std::endl;
+	    std::cout << "Le vainqueur est " << p_personnage.getName() << " avec " << p_personnage.getHealth() << " points de vie."<< std::endl;
 	}
 	else
 	{
         std::cout << p_personnage.getName() << " est mort." << std::endl;
-	    std::cout << "Le vainqueur est " << p_ennemi.getName() << std::endl;
+	    std::cout << "Le vainqueur est " << p_ennemi.getName() << " avec " << p_ennemi.getHealth() << " points de vie." << std::endl;
 	}
 }

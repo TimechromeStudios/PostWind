@@ -77,7 +77,7 @@ void fight(Alive &p_personnage, Alive &p_ennemi)
 {
 	std::cout << std::endl << "Le combat entre " << p_personnage.getName() << " et " << p_ennemi.getName() << " va commencer." << std::endl;
 	std::cout << "Vous avez chacun un sabre laser, faisant plus ou moins de degats" << std::endl;
-	while(p_ennemi.getHealth() > 0 || p_ennemi.getHealth() > 0)
+	while(p_personnage.getHealth() > 0 || p_ennemi.getHealth() > 0)
 	{
 		if(p_personnage.getCaracs().getCou() > p_ennemi.getCaracs().getCou())
 		{

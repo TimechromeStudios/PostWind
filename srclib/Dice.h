@@ -16,5 +16,6 @@ public:
 	static int d12();
 	static int d20();
 	static int d100();
+	static int range(int min, int max);
 };
 #endif

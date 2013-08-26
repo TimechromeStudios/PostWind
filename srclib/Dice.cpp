@@ -49,3 +49,7 @@ int Dice::d100()
 	++resultat;
 	return resultat;
 }
+int Dice::range(int min, int max)
+{
+	int resultat = rand() % (max - min + 1) + min;
+}

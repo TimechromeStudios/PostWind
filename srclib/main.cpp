@@ -13,7 +13,7 @@
 
 using namespace std; //Utilisation du namespace standard
 
-string const version = "de developpement"; //Version du programme, affichée plus bas
+string const version = "pre-Alpha"; //Version du programme, affichée plus bas
 int entityId = 0; //Index d'entité, à incrémenter au fur et à mesure des créations d'entités
 Alive personnage(0, 100, "Personnage", 0, 10, Caracs(), Competences());
 Alive ennemi(1, 100, "Personnage", 0, 10, Caracs(), Competences());
@@ -21,7 +21,7 @@ Alive ennemi(1, 100, "Personnage", 0, 10, Caracs(), Competences());
 
 int main() //Fonction principale
 {
-	srand(time(0));
+	Dice::init();
 	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl; //Message de bienvenue
 	cout << "Le jeu va commencer!" << endl; //Là, je pense que vous avez compris
 	preparation(personnage, ennemi);

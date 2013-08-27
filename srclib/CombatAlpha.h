@@ -61,7 +61,6 @@ void tourDeCombat(Alive &attaquant, Alive &cible)//TODO Rajouter les échecs et 
         if(Dice::d20() <= attaquant.getCaracs().getAdr())
         {
             int degats = Dice::range(attaquant.getMinDB(), attaquant.getMaxDB());
-            std::cout << Dice::range(10, 20) << std::endl;
             std::cout << "L'attaque de " << attaquant.getName() << " est reussie et inflige " << degats << " degats." << std::endl;
             cible.lowingHealth(degats);
         }
@@ -77,6 +76,7 @@ void fight(Alive &p_personnage, Alive &p_ennemi)
 	std::string buffer;
 	std::cout << std::endl << "Le combat entre " << p_personnage.getName() << " et " << p_ennemi.getName() << " va commencer." << std::endl;
 	std::cout << "Vous avez chacun un sabre laser, faisant plus ou moins de degats" << std::endl;
+	std::cout << p_ennemi.getMinDB() << " " << p_ennemi.getMaxDB() << std::endl;
 	while(p_personnage.getHealth() > 0 && p_ennemi.getHealth() > 0)
 	{
 		if(p_personnage.getCaracs().getCou() > p_ennemi.getCaracs().getCou())
@@ -89,9 +89,9 @@ void fight(Alive &p_personnage, Alive &p_ennemi)
 			tourDeCombat(p_ennemi, p_personnage);
 			tourDeCombat(p_personnage, p_ennemi);
 		}
-		//std::cout << "Il vous reste " << p_personnage.getHealth() << " points de vie." << std::endl;
-		std::cout << p_personnage.getName() << ": " << p_personnage.getHealth() << std::endl << p_ennemi.getName() << ": " << p_ennemi.getHealth() << std::endl;
-		std::cin >> buffer;
+		std::cout << "Il vous reste " << p_personnage.getHealth() << " points de vie." << std::endl;
+		//std::cout << p_personnage.getName() << ": " << p_personnage.getHealth() << std::endl << p_ennemi.getName() << ": " << p_ennemi.getHealth() << std::endl;
+		//std::cin >> buffer;
 	}
 	if(p_personnage.getHealth() > 0)
 	{

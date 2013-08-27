@@ -21,7 +21,8 @@ Alive ennemi(1, 100, "Personnage", 0, 10, Caracs(), Competences());
 
 int main() //Fonction principale
 {
-	Dice::init();
+	//Dice::init();
+	srand(time(NULL));
 	cout << "Bienvenue dans la version " << version << " de PostWind!" << endl; //Message de bienvenue
 	cout << "Le jeu va commencer!" << endl; //Là, je pense que vous avez compris
 	preparation(personnage, ennemi);

@@ -5,7 +5,7 @@ Dice::Dice()
 }
 void Dice::init()
 {
-    srand(time(0));
+    srand(time(NULL));
 }
 int Dice::d4()
 {
@@ -51,5 +51,7 @@ int Dice::d100()
 }
 int Dice::range(int min, int max)
 {
-	int resultat = rand() % max - min;
+	//std::cout << max << std::endl;
+	int resultat = rand() % max + min;
+	return resultat;
 }

@@ -51,5 +51,5 @@ int Dice::d100()
 }
 int Dice::range(int min, int max)
 {
-	int resultat = rand() * (max - min + 1) + min;
+	int resultat = rand() % max - min;
 }

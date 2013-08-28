@@ -38,11 +38,17 @@ int Alive::getMaxDB()
 }
 void Alive::setMinDB(int p_damage)
 {
-    minDamageBase = p_damage;
+    if(p_damage > 0)
+    {
+        minDamageBase = p_damage;
+    }
 }
 void Alive::setMaxDB(int p_damage)
 {
-    maxDamageBase = p_damage;
+    if(p_damage > 0)
+    {
+        maxDamageBase = p_damage;
+    }
 }
 
 void Alive::attackEntity(Entity &cible, int p_damage)

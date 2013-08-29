@@ -1,6 +1,15 @@
 #include <iostream>
 #include "Dice.h"
 
+enum difficulte
+{
+	baby = 10,
+	easy = 25,
+	normal = 45,
+	hard = 65, //Dégâts commencent à 10
+	notimpossible = 80; //Dégâts commencent à 25
+	impossible = 120; //Dégâts commencent à 40
+}
 void preparation(Alive &p_personnage, Alive &p_ennemi)
 {
 	std::string name;

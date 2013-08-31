@@ -38,13 +38,19 @@
 		<Unit filename="Arme.h" />
 		<Unit filename="Caracs.cpp" />
 		<Unit filename="Caracs.h" />
+		<Unit filename="CombatAlpha.h" />
 		<Unit filename="Competences.cpp" />
 		<Unit filename="Competences.h" />
+		<Unit filename="Dice.cpp" />
+		<Unit filename="Dice.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />
 		<Unit filename="Item.cpp" />
 		<Unit filename="Item.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="ressources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

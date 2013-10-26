@@ -1,9 +1,9 @@
 PostWind
 ========
 
-PostWind is realeased under GPL license
+PostWind is realeased under Creative Commons Attribution - No Commercial Use
 
-Postwind is a console adaptation of a paper cyberpunk RPG created by lacaulac, and currently not published.
+Postwind is a roleplaying engine that will be used for the game PostWind, developed by TimeChrome Studios
 This game is coded in C++ by lacaulac, Sventar, Kino, LittlesMonsters and Ercry, five coders of TimeChrome Studio.
 The game will be soon translated in Javascript using Emscripten.
 Happy hacking and playing!

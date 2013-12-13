@@ -35,6 +35,25 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "CombatAlpha.h",
+			"settings":
+			{
+				"buffer_size": 3912,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# -*- coding: utf-8 -*-\n\"\"\"\n@author: tambre\n@version: v0.2\n\"\"\"\n\nimport os\nimport sys\nimport getopt\nimport shutil\nimport subprocess\nimport re\n\ndef startProcess(command):\n        import shlex\n        args = shlex.split(command)\n        p = subprocess.Popen(args)\n        p.communicate()[0]\n\ndef getVersion(line):\n	cfg = open(os.getcwd() + \"/conf/smcp.cfg\", \"r\")\n	lines = cfg.readlines()\n	line = lines[line].strip()\n	ver = line.split('=', 1)[1]\n	return ver\n\ndef getMD5(file, block_size=2**20):\n        import hashlib\n        md5 = hashlib.md5()\n        while True:\n                data = file.read(block_size)\n                if not data:\n                        break\n                md5.update(data)\n        return md5.digest()\n\ndef sumfile(fobj):\n    '''Returns an md5 hash for an object with read() method.'''\n    m = md5.new()\n    while True:\n        d = fobj.read(8096)\n        if not d:\n            break\n        m.update(d)\n    return m.hexdigest()\n\ndef main(argv):\n        ignoreupdates = True\n        hasfailed = False\n        try:\n                opts, args = getopt.getopt(argv, \"iu\", [\"ignoreupdates\"])\n        except getopt.GetoptError:\n                #TO-DO: Add usage printout\n                print (\"Failed to parse arguments\")\n                sys.exit()\n        for opt, arg in opts:\n                if opt in (\"-iu\", \"--ignoreupdates\"):\n                        ignoreupdates = True\n        print ('-----------------------------------------')\n        print ('--------- Welcome to SMCP v%s ---------' % getVersion(0))\n        print ('-----------------------------------------\\n')\n        workingDir = os.getcwd()\n        if ignoreupdates == False:\n                print ('Checking for updates...')\n                try:\n                        #import hashlib\n                        starmademdweb = urllib.request.urlopen(\"http://smcp.pingu.pw/file.md5\");\n                        starmademdraw = starmademdweb.read()\n                        #print (sumfile(open(workingDir + '\\install\\StarMade.zip')))\n                except urllib.error.HTTPError as exception:\n                        print ('    *   Unable to get latest version info - HTTPError =  ' + str(exception.reason))\n                except urllib.error.URLError as exception:\n                        print ('    *   Unable to get latest version info - URLError = ' + str(exception.reason))\n                        sys.exit(2)\n                except urllib.error.HTTPException as exception:\n                        print ('    *   Unable to get latest version info - HTTPException')\n                        sys.exit(2)\n                except Exception as exception:\n                        import traceback\n                        print ('    *   Unable to get latest version info - Exception = ' + traceback.format_exc())\n                        sys.exit(2)\n                print ('*   Checking StarMade for an update...')\n                starmademdweb.close()\n                print (starmademdraw)\n        print ('Extracting StarMade v%s\\n' % getVersion(1))\n        if not os.path.exists('instance') and not os.path.isdir('instance'):\n                os.makedirs('instance')\n        if not os.path.exists('tmp') and not os.path.isdir('tmp'):\n                os.makedirs('tmp')\n        if not os.path.exists('conf') and not os.path.isdir('conf'):\n                os.makedirs('conf')\n        os.chdir(workingDir + '/install')\n        unzip(\"StarMade.zip\", workingDir + '/instance')\n        os.chdir(workingDir)\n        print ('Decompiling StarMade')\n        print ('*   Deobfuscating... (Stage #1)')\n        print ('*       Not here yet, skipping')\n        startProcess(\"java -Xmx1G -jar runtime/N3Remapper.jar conf/remapper.cfg pre instance/StarMade.jar tmp/deobf.zip\")\n        print ('*   Decompiling...   (Stage #2)')\n        if not os.path.exists('sources') and not os.path.isdir('sources'):\n                os.makedirs('sources')\n        #tmp/deobf.zip when we have implemented SpecialSource\n        startProcess(\"java -Xmx1G -jar runtime/fernflower.jar install/StarMade.zip sources\")\n        os.chdir(workingDir + '/install')\n        print ('Setting up Eclipse workspace\\n')\n        unzip(\"EclipseWorkspace.zip\", workingDir)\n        os.chdir(workingDir)\n        if os.path.exists('tmp'):\n                print ('Deleting temporary files\\n')\n                shutil.rmtree('tmp')\n        endMessage(hasfailed)\n\ndef endMessage(failed):\n        if failed:\n                print ('---------------------')\n                print ('- SMCP setup failed -')\n                print ('---------------------')\n        else:\n                print ('-----------------------------------------')\n                print ('- SMCP Is now ready for mod development -')\n                print ('-----------------------------------------')\n	\ndef unzip(zipFilePath, destDir):\n        import zipfile\n        zfile = zipfile.ZipFile(zipFilePath)\n        for name in zfile.namelist():\n                (dirName, fileName) = os.path.split(name)\n                if fileName == '':\n                        newDir = destDir + '/' + dirName\n                        if not os.path.exists(newDir):\n                                os.mkdir(newDir)\n                else:\n                        fd = open(destDir + '/' + name, 'wb')\n                        fd.write(zfile.read(name))\n                        fd.close()\n        zfile.close()\n	\nif __name__ == \"__main__\":\n	main(sys.argv[1:])\n",
+			"file": "/Users/Antonin/Downloads/StarMade-master/scripts/setup.py",
+			"file_size": 5432,
+			"file_write_time": 130283278050000000,
+			"settings":
+			{
+				"buffer_size": 5431,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -88,6 +107,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ignoreupdates",
 			"srand",
 			"rand"
 		],
@@ -107,8 +127,64 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "CombatAlpha.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3912,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1082.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Antonin/Downloads/StarMade-master/scripts/setup.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3524,
+								3524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1012.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

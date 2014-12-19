@@ -1,5 +1,11 @@
 #include "Combat.h"
 
+Combat::Combat(Alive &personnage, Alive &ennemi)
+{
+	p_personnage = personnage;
+	p_ennemi = ennemi;
+}
+
  void Combat::tourDeCombat()
 	{
 		if(attaquant.getHealth() > 0)
@@ -65,3 +71,8 @@
 	    	std::cout << "Le vainqueur est " << p_ennemi.getName() << " avec " << p_ennemi.getHealth() << " points de vie." << std::endl;
 		}
 	}
+void Combat::setFighters(Alive &personnage, Alive &ennemi)
+{
+	p_personnage = personnage;
+	p_ennemi = ennemi;
+}

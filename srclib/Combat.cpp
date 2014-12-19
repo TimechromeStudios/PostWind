@@ -8,7 +8,7 @@ Combat::Combat(Alive &personnage, Alive &ennemi)
 
  void Combat::tourDeCombat()
 	{
-		if(attaquant.getHealth() > 0)
+	   if(attaquant.getHealth() > 0)
  	   {
     	    std::cout << attaquant.getName() << " tente d'attaquer" << std::endl;
         	if(Dice::d20() <= attaquant.getCaracs().getAdr())
@@ -30,6 +30,7 @@ Combat::Combat(Alive &personnage, Alive &ennemi)
             	std::cout << "L'attaque de " << attaquant.getName() << " a echouee" << std::endl;
         	}
     	}
+	}
     	void Combat::fight()
 	{
 		std::string buffer;

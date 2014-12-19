@@ -6,7 +6,7 @@
 
 class Combat
 {
-private:
+protected:
 
 	Alive &p_personnage;
 	Alive &p_ennemi;

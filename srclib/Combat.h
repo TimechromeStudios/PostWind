@@ -13,7 +13,6 @@ protected:
 	Alive &p_ennemi;
 	Alive &attaquant;
 	Alive &cible;
-    }
 
 public:
 	Combat(Alive &personnage, Alive &ennemi);

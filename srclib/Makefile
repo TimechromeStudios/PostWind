@@ -17,6 +17,9 @@ lib:
 	cp lib/rpg.so ../lib/rpg.so
 start:
 	./bin/rpg
+pull:
+	cd ..
+	git pull
 prepare:
 	mkdir bin
 	mkdir ../bin

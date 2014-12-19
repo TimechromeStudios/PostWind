@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Dice.h"
+#include "Alive.h"
 
 class Combat
 {

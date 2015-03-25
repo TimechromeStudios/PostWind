@@ -51,6 +51,10 @@ int Dice::d100()
 }
 int Dice::range(int min, int max)
 {
+	if (min == max)
+	{
+		return min;
+	}
 	//std::cout << max << std::endl;
 	int resultat = rand() % (max - min) + min;
 	return resultat;
